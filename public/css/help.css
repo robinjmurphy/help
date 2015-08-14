@@ -68,7 +68,7 @@ p {
   box-shadow: 0 0 10px #ccc inset;
 }
 
-@media screen and (max-height: 600px) {
+@media screen and (max-height: 500px) {
   .chat {
     font-size: 14px;
   }
