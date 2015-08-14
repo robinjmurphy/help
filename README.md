@@ -30,13 +30,13 @@ Everything about help is configurable; from the basic IRC connection settings to
 
 The server's index page includes a link to start a new chat. You can create you own button on your website just by linking to the server's `/chat` page in a new window.
 
-To pass arbitrary data to the chat window from your website (a customer ID or name, for example) just set the query string when linking to the `/chat` page. All of the query parameters are accessible as Mustash variables when you configure the message that is sent when someone joins a chat.
+To pass arbitrary data to the chat window from your website (a customer ID or name, for example) just set the query string when linking to the `/chat` page. All of the query parameters are accessible as Mustashe variables when you configure the message that is sent when someone joins a chat.
 
 ```
 /chat?name=robin
 ```
 
-In `settings.js`:
+In [`settings.js`](settings.js):
 
 ```
 join: "You're chatting to {{name}}"
