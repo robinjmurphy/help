@@ -2,7 +2,7 @@
 
 > Live chat support powered by IRC
 
-Users chat in their browser – you respond using IRC.
+Users chat in their browser – you respond using IRC. Join [#help-demo](irc://irc.freenode.com/help-demo) on Freenode and start a chat at https://help-demo.herokuapp.com/ for a live demo.
 
 ![Screenshot](screenshot.png)
 
