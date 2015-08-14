@@ -28,7 +28,7 @@ module.exports = {
   /**
    * Sets the log level. Use `debug` to see all incoming and outgoing messages
    */
-  logLevel: 'debug',
+  logLevel: 'info',
 
   /**
    * Configuration to be passed to node-irc
