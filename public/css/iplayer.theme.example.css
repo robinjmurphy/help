@@ -1,0 +1,43 @@
+/* iPlayer theme */
+
+body {
+  background-color: #252525;
+}
+
+.welcome {
+  background-color: #353535;
+  color: #ccc;
+  border-bottom: 1px solid #404040;
+}
+
+.input {
+  border-top-color: #404040;
+}
+
+.chat-input {
+  background-color: #353535;
+}
+
+.chat-input:focus {
+  box-shadow: none;
+  color: #ccc;
+}
+
+.message {
+  color: #eee;
+  border-bottom: 1px solid #404040;
+}
+
+.user {
+  background-color: #333;
+}
+
+.sender {
+  color: #F54997;
+  font-weight: normal;
+  margin-right: 5px;
+}
+
+.info {
+  color: #888;
+}
