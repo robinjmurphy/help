@@ -20,6 +20,10 @@ app.use(function (req, res, next) {
   next();
 });
 
+app.get('/', function (req, res, next) {
+  res.render('index');
+});
+
 app.get('/chat', function (req, res) {
   irc.createChannel(req.query, function (channel, events) {
     events.on('join', function (helper) {
@@ -78,7 +82,7 @@ irc.connect(function () {
 
     socket.on('disconnect', function () {
       logger.info('User disconnected %s', socket.id);
-      // irc.partChannel(socket.room);
+      irc.partChannel(socket.room);
     });
 
     socket.on('message', function (data) {
