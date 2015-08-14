@@ -4,6 +4,8 @@
 
 Users chat in their browser – you respond using IRC.
 
+![Screenshot](screenshot.png)
+
 ## How it works
 
 The _help_ server connects to your IRC server and creates an ad-hoc channel for each chat. It lets you know when a chat is created so you can join the channel and provide support. Messages are passed between the browser and the IRC server using WebSockets.
