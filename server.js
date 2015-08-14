@@ -6,6 +6,7 @@ var path = require('path');
 var irc = require('./lib/irc');
 var settings = require('./settings');
 var app = express();
+var connected = false;
 var io;
 
 app.disable('x-powered-by');
@@ -14,6 +15,12 @@ app.set('view engine', 'html');
 app.set('layout', 'layout');
 app.set('views', path.join(__dirname, 'views'));
 app.use(express.static(path.join(__dirname, 'public')));
+
+app.use(function (req, res, next) {
+  if (!connected) return next(new Error('IRC has not yet connected. Please wait.'));
+
+  next();
+});
 
 app.use(function (req, res, next) {
   res.locals.windowTitle = settings.windowTitle;
@@ -64,11 +71,12 @@ app.use(function (err, req, res, next) { // jshint ignore:line
   res.status(statusCode).send(err.message);
 });
 
-irc.connect(function () {
-  var server = app.listen(settings.port, function () {
-    logger.info('Server started at http://127.0.0.1:%d', server.address().port);
-  });
+var server = app.listen(settings.port, function () {
+  logger.info('Server started at http://127.0.0.1:%d', server.address().port);
+});
 
+irc.connect(function () {
+  connected = true;
   io = require('socket.io')(server);
 
   io.on('connection', function (socket) {
