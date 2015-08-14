@@ -6,11 +6,17 @@
   var room = chat.dataset.channel;
   var query = JSON.parse(chat.dataset.query);
 
-  function appendMessage(sender, message) {
+  function scrollToBottom() {
+    messages.scrollTop = messages.scrollHeight;
+  }
+
+  function appendMessage(sender, message, className) {
     var el = document.createElement('p');
     el.innerHTML = '<span class="sender">' + sender + '</span> ' + linkify(message);
     el.className = 'message';
+    if (className) el.className += ' ' + className;
     messages.appendChild(el);
+    scrollToBottom();
   }
 
   function appendInfoMessage(message) {
@@ -18,6 +24,7 @@
     el.innerHTML = message;
     el.className = 'message info';
     messages.appendChild(el);
+    scrollToBottom();
   }
 
   socket.on('connect', function () {
@@ -47,7 +54,7 @@
         room: room,
         message: chatBox.value
       });
-      appendMessage('me', chatBox.value);
+      appendMessage('me', chatBox.value, 'user');
       chatBox.value = '';
     }
   });
