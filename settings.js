@@ -2,7 +2,7 @@ module.exports = {
   /**
    * The port that the server will listen on
    */
-  port: 3000,
+  port: process.env.PORT || 3000,
 
   /**
    * The IRC nick that server should use
@@ -66,7 +66,7 @@ module.exports = {
      * Available variables are: {{helper}} (the helper's nickname) and any variables passed
      * in the /chat query string
      */
-    join: 'Hello {{helper}}!, {{name}} is looking for some help.',
+    join: 'Hello {{helper}}! {{name}} is looking for some help.',
 
     /**
      * Message shown to the user when they open a new chat window
