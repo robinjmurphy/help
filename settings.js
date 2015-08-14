@@ -7,12 +7,12 @@ module.exports = {
   /**
    * The IRC nick that server should use
    */
-  nick: 'help',
+  nick: 'help-demo',
 
   /**
    * The prefix to use for all adhoc channels
    */
-  channelPrefix: 'help-',
+  channelPrefix: 'help-demo-',
 
   /**
    * The title of each chat window
@@ -38,7 +38,7 @@ module.exports = {
     /**
      * The IRC server to connect to
      */
-    host: 'localhost',
+    host: 'irc.freenode.com',
 
     /**
      * The port to connect to
@@ -49,7 +49,7 @@ module.exports = {
      * List of channels to join on connection
      */
     channels: [
-      "#help"
+      "#help-demo"
     ]
   },
 
