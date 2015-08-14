@@ -20,7 +20,7 @@ cd help
 node server.js
 ```
 
-Open http://127.0.0.1:3000 in your web browser and click _Start chat_ to open a chat window.
+Open http://127.0.0.1:3000 in your web browser, enter your name and click _Start a chat_ to open a chat window. The server tries to connect to `localhost:6667` by default, but you can use a public server like [Freenode](https://freenode.net/) if you're happy for your chats to be public.
 
 ## Configuration
 
