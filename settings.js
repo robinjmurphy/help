@@ -15,6 +15,11 @@ module.exports = {
   channelPrefix: 'help-',
 
   /**
+   * The title of each chat window
+   */
+  windowTitle: 'Help',
+
+  /**
    * The prefix to use for all incoming IRC messages
    * Supports all variables in the /chat query string
    */

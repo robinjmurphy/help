@@ -15,6 +15,11 @@ app.set('layout', 'layout');
 app.set('views', path.join(__dirname, 'views'));
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.use(function (req, res, next) {
+  res.locals.windowTitle = settings.windowTitle;
+  next();
+});
+
 app.get('/chat', function (req, res) {
   irc.createChannel(req.query, function (channel, events) {
     events.on('join', function (helper) {
