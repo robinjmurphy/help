@@ -45,3 +45,8 @@ join: "You're chatting to {{name}}"
 ## Theming
 
 The chat window comes with a basic theme. You can override any part of the interface by adding your own styles to [`public/css/theme.css`](public/css/theme.css).
+
+## Contributors
+
+* [@robinjmurphy](https://github.com/robinjmurphy)
+* [@mrwillihog](https://github.com/mrwillihog)
