@@ -17,6 +17,7 @@ The _help_ server connects to your IRC server and creates an ad-hoc channel for 
 ```
 git clone https://GitHub.com/robinjmurphy/help.git
 cd help
+npm install
 node server.js
 ```
 
