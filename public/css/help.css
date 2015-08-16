@@ -134,3 +134,11 @@ p {
 .index .submit:focus {
   background-color: #FFAD69;
 }
+
+.connecting {
+  text-align: center;
+  color: #666;
+  font-size: 1.6em;
+  padding-top: 3em;
+  font-weight: 200;
+}

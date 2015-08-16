@@ -17,13 +17,13 @@ app.set('views', path.join(__dirname, 'views'));
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(function (req, res, next) {
-  if (!connected) return next(new Error('IRC has not yet connected. Please wait.'));
-
+  res.locals.windowTitle = settings.windowTitle;
   next();
 });
 
 app.use(function (req, res, next) {
-  res.locals.windowTitle = settings.windowTitle;
+  if (!connected) return res.render('connecting');
+
   next();
 });
 
